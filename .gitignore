@@ -84,3 +84,6 @@ test-results/
 
 # Local copy of the migration guide (kept out of new repos created from this template)
 _spec/
+
+# EDV server data
+data/
