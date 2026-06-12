@@ -6,7 +6,10 @@
  * under it, and every chain controller plus the delegator are collected so
  * that any chain participant may invoke the revocation endpoint.
  */
-import * as jsigs from '@interop/jsonld-signatures'
+// default import: the package is CJS and its named exports are not
+// statically detectable at runtime under node ESM (`jsigs.verify` would be
+// undefined with a namespace import outside of vitest's interop)
+import jsigs from '@interop/jsonld-signatures'
 import { CapabilityDelegation } from '@interop/zcap'
 import type { InspectCapabilityChain, InspectResult } from '@interop/zcap'
 import type { IDelegatedZcap, IZcap } from '@interop/data-integrity-core'
