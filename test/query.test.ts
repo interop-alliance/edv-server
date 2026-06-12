@@ -121,6 +121,17 @@ describe('docMatches', () => {
     ).toBe(true)
   })
 
+  it('matches nothing for an empty equals element', () => {
+    // a query for an attribute the client never indexed arrives as
+    // `equals: [{}]`; reference parity (mongo `$all: []`) is no match
+    expect(
+      docMatches({
+        doc,
+        query: { index: HMAC_A, equals: [{}] }
+      })
+    ).toBe(false)
+  })
+
   it('scopes equals to the queried hmac id', () => {
     expect(
       docMatches({
