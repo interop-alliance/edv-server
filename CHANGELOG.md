@@ -1,6 +1,6 @@
 # @interop/edv-server Changelog
 
-## 0.0.1 - TBD
+## 0.1.0 - TBD
 
 ### Added
 
@@ -28,8 +28,8 @@
   (vacuous `every()`), where reference behavior (mongo `$all: []`) is an empty
   result. Surfaced by the conformance suite.
 - Revocations: use a default import of `@interop/jsonld-signatures` in the
-  delegation-chain verification. The package's named exports are not
-  statically detectable on its CJS entry point (through 11.7.1), so under
-  plain node/tsx the namespace import had no callable `verify` and every
-  revocation request returned 500 -- vitest's CJS interop masked this, so
-  only the standalone server was affected. Surfaced by the conformance suite.
+  delegation-chain verification. The package's named exports are not statically
+  detectable on its CJS entry point (through 11.7.1), so under plain node/tsx
+  the namespace import had no callable `verify` and every revocation request
+  returned 500 -- vitest's CJS interop masked this, so only the standalone
+  server was affected. Surfaced by the conformance suite.
