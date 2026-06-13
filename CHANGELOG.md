@@ -1,6 +1,6 @@
 # @interop/edv-server Changelog
 
-## 0.1.0 - TBD
+## 0.1.0 - 2026-06-13
 
 ### Added
 

@@ -1,7 +1,7 @@
 {
   "name": "@interop/edv-server",
   "description": "Encrypted Data Vault (EDV) server: a fastify plugin and standalone server with filesystem storage.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "build": "pnpm run clear && tsc",
